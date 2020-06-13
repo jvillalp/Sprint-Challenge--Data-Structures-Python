@@ -9,6 +9,9 @@ f.close()
 f = open('names_2.txt', 'r')
 names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
+
+
+#stretch
 #convert names_2 to set for fster look up.
 #A set is a collection which is unordered and unindexed. In Python sets are written with curly brackets.
 names_2 = set(names_2)
@@ -22,6 +25,7 @@ duplicates = []  # Return the list of duplicates in this data structure
 #             duplicates.append(name_1)
 
 for name_1 in names_1:
+    #only needs to index through names_2 if exist in names_1 array
     if name_1 in names_2:
         duplicates.append(name_1)
 
